@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", function () {
       <td>${data.city}</td>
       <td>${data.email}</td>
       <td>
-        <button class="edit-btn" onclick="editRow(${index})">Edit</button>
-        <button class="delete-btn" onclick="deleteRow(${index})">Delete</button>
+        <button style="background-color: yellow; color: black;" class="edit-btn" onclick="editRow(${index})">Edit</button>
+        <button style="background-color: red; color: black;" class="delete-btn" onclick="deleteRow(${index})">Delete</button>
       </td>
     `;
     tableBody.appendChild(row);
@@ -107,10 +107,6 @@ document.addEventListener("DOMContentLoaded", function () {
       passwordStrength.textContent = "Medium Strength";
       passwordStrength.style.color = "orange";
     }
-  });
-
-  document.getElementById("toggleDarkMode").addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
   });
 
   refreshTable();
