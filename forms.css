@@ -1,4 +1,4 @@
-/* Body settings */
+/* General Body Settings */
 body {
     font-family: Arial, sans-serif;
     background: transparent;
@@ -8,7 +8,7 @@ body {
     z-index: 1;
 }
 
-/* Gradient + bubbles background container */
+/* Background Gradient & Bubbles */
 .bubbles {
     position: fixed;
     width: 100%;
@@ -17,17 +17,15 @@ body {
     overflow: hidden;
     top: 0;
     left: 0;
-
     background: linear-gradient(
         to bottom,
-        #6ec1ff,                        /* Top: light blue */
-        rgba(255, 192, 203, 0.3) 50%,   /* Center: light pink with fade */
-        #ff69b4,                        /* Deeper pink */
-        #360033                         /* Bottom: dark purple */
+        #6ec1ff,
+        rgba(255, 192, 203, 0.3) 50%,
+        #ff69b4,
+        #360033
     );
 }
 
-/* Bubble animation */
 .bubbles span {
     position: absolute;
     display: block;
@@ -52,35 +50,38 @@ body {
     }
 }
 
-/* Page Heading */
+/* Heading */
 h1 {
     text-align: center;
     color: #333;
 }
 
-/* Form container */
+/* Form Container */
 form {
-    max-width: 600px;
+    max-width: 650px;
     margin: 30px auto;
-    background: #ffffffcc; /* Slightly transparent white */
+    background: #ffffffcc;
     padding: 25px 30px;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-/* Label styling */
+/* Label Styling */
 label {
     display: block;
     margin-top: 15px;
     font-weight: 600;
+    color: #333;
 }
 
-/* Input fields */
+/* Input Fields */
 input[type="text"],
 input[type="number"],
 input[type="email"],
 input[type="password"],
-select {
+input[type="file"],
+select,
+textarea {
     width: 100%;
     padding: 10px;
     margin-top: 6px;
@@ -89,14 +90,30 @@ select {
     box-sizing: border-box;
 }
 
-/* Radio & Checkbox */
+/* Textarea */
+textarea {
+    resize: vertical;
+}
+
+/* Radio and Checkbox Styling */
 input[type="radio"],
 input[type="checkbox"] {
     margin-right: 6px;
     margin-top: 10px;
 }
 
-/* Submit Button - centered */
+/* Terms label inline with checkbox */
+#terms {
+    margin-top: 10px;
+}
+
+label[for="terms"] {
+    display: inline-block;
+    margin-top: 15px;
+    font-weight: normal;
+}
+
+/* Submit Button */
 button {
     display: block;
     margin: 25px auto 0 auto;
@@ -110,14 +127,13 @@ button {
     transition: all 0.3s ease;
 }
 
-/* Hover effect */
 button:hover {
     background-color: #0056b3;
     transform: scale(1.05);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Table styling */
+/* Table Styling */
 table {
     width: 90%;
     margin: 30px auto;
